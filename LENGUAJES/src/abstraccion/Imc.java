@@ -13,4 +13,9 @@ public class Imc {
     Usuario U;
     String resultado;
     
+    public String calcular(){
+       float mivalor = U.peso / (U.altura*U.altura);
+       resultado = "Tu imc es " + mivalor;
+       return resultado;
+    }
 }
