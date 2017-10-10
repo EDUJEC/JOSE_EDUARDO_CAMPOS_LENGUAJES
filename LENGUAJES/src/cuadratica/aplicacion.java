@@ -7,7 +7,7 @@ package cuadratica;
 
 /**
  *
- * @author T-107
+ * @author T-102
  */
 public class aplicacion extends javax.swing.JFrame {
 
@@ -27,128 +27,109 @@ public class aplicacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Calcular = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        TextoA = new javax.swing.JTextField();
-        TextoB = new javax.swing.JTextField();
-        TextoC = new javax.swing.JTextField();
-        X1 = new javax.swing.JLabel();
-        X2 = new javax.swing.JLabel();
-        Botoncito = new javax.swing.JButton();
+        Textoa = new javax.swing.JTextField();
+        Textob = new javax.swing.JTextField();
+        Textoc = new javax.swing.JTextField();
+        x1 = new javax.swing.JLabel();
+        x2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Calcular.setText("Calcular");
+        Calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalcularActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("a");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("b");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("c");
 
-        TextoA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextoAActionPerformed(evt);
-            }
-        });
+        x1.setText("X1");
 
-        TextoB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextoBActionPerformed(evt);
-            }
-        });
-
-        TextoC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextoCActionPerformed(evt);
-            }
-        });
-
-        X1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        X1.setText("X1:");
-
-        X2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        X2.setText("X2:");
-
-        Botoncito.setText("CALCULAR");
-        Botoncito.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotoncitoActionPerformed(evt);
-            }
-        });
+        x2.setText("X2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextoB, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextoC, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(TextoA, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Botoncito, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(X2)
-                    .addComponent(X1))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Textoa)
+                    .addComponent(Textob)
+                    .addComponent(Textoc, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Calcular)
+                .addGap(52, 52, 52))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(x1)
+                .addGap(85, 85, 85)
+                .addComponent(x2)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Calcular)
                     .addComponent(jLabel1)
-                    .addComponent(TextoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Botoncito, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                    .addComponent(Textoa, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(TextoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(X1))
-                .addGap(27, 27, 27)
+                    .addComponent(Textob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(TextoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(X2))
-                .addContainerGap(117, Short.MAX_VALUE))
+                    .addComponent(Textoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(x1)
+                    .addComponent(x2))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextoBActionPerformed
+    private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TextoBActionPerformed
+        float a = Float.parseFloat(Textoa.getText());
+        float b = Float.parseFloat(Textob.getText());
+        float c = Float.parseFloat(Textoc.getText());
+        
+        
+        //Para probar generamos un objeto de tipo ecuacion
+        EcuacionCuadratica ec=new EcuacionCuadratica();
+       ec.setA(a);
+       ec.setB(b);
+       ec.setC(c);
+       
+       x1.setText(ec.raiz1());
+       x2.setText(ec.raiz2());
+       
+    }//GEN-LAST:event_CalcularActionPerformed
 
-    private void TextoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextoCActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextoCActionPerformed
-
-    private void BotoncitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoncitoActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-        
-    }//GEN-LAST:event_BotoncitoActionPerformed
-
-    private void TextoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextoAActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextoAActionPerformed
- 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -180,14 +161,14 @@ public class aplicacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Botoncito;
-    private javax.swing.JTextField TextoA;
-    private javax.swing.JTextField TextoB;
-    private javax.swing.JTextField TextoC;
-    private javax.swing.JLabel X1;
-    private javax.swing.JLabel X2;
+    private javax.swing.JButton Calcular;
+    private javax.swing.JTextField Textoa;
+    private javax.swing.JTextField Textob;
+    private javax.swing.JTextField Textoc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel x1;
+    private javax.swing.JLabel x2;
     // End of variables declaration//GEN-END:variables
 }
