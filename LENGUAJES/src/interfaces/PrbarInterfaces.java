@@ -9,11 +9,15 @@ package interfaces;
  *
  * @author T-102
  */
-public interface Direccion {
-    public int  x=0;
-    // Un metodo 
-    public void generarDireccion();
-    //pongams un constructor 
+public class PrbarInterfaces {
+    public static void main(String[] args) {
+        //no se pueden jeenrar objetos en  las interfaces
+        
+       // Direccion d = new Direccion();
+    Direccion d;
     
+    
+       
+    }
     
 }

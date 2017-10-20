@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfaces;
+package colecciones;
 
 /**
  *
  * @author T-102
  */
-public interface Direccion {
-    public int  x=0;
-    // Un metodo 
-    public void generarDireccion();
-    //pongams un constructor 
-    
+class List {
     
 }

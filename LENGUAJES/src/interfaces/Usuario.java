@@ -9,11 +9,13 @@ package interfaces;
  *
  * @author T-102
  */
-public interface Direccion {
-    public int  x=0;
-    // Un metodo 
-    public void generarDireccion();
-    //pongams un constructor 
-    
+public class Usuario implements Direccion{
+
+    @Override
+    public void generarDireccion() {
+        
+        
+        
+    }
     
 }
