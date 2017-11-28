@@ -12,11 +12,15 @@ import java.sql.*;
  */
 public class Conexion {
 
-    public static Connection conectarse(String login, String password) throw SQLException, ClassNotFoundException{
-       
-     String
+    public static Connection conectarse(String login, String password) throws SQLException, ClassNotFoundException{
+       //Primero Escribimos el url de MYSQL
+     String url="jdbc:mysql://localhost:3306/mysql";
+     //Ahora hacemos el cargo con el codigo del driver
+     //
+     Class.forName("com.mysql.jdbc.Driver");
+     Connection con = DriverManager.getConnection(url, login, password);
         
-        
+     return con;
     }
     
 }
