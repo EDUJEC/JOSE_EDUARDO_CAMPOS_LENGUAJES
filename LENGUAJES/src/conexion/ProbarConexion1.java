@@ -11,7 +11,7 @@ import java.sql.*;
  *
  * @author T-102
  */
-public class ProbarConexion {
+public class ProbarConexion1 {
     //kotlin jetbrens compilador online kotlinlang.org
     public static void main (String[] args){
      
@@ -24,23 +24,13 @@ public class ProbarConexion {
     //Aqui vienen queris de mysql
     
      System.out.println("Teconectaste muy bien !!!!!");
+
+     //Caso especial del SELECT
+     //Paso 1 generar una consulta(query)
+     
+     Statement st = con.createStatement();
+     ResultSet rs = st.executeQuery("select * from tablita");
     
-     //Condicion que se llama con vamos a genrerar una centencia la cual 
-     //es una clase
-     //Statement st = con.createStatement();
-     //Generamos la tabla
-      //  st.execute("create table tablita(id integer primary key, nombre varchar(40))");
-      //Caso 1 INSERT
-      PreparedStatement st=con.prepareStatement("insert into tablita values(?,?)");
-      st.setInt(1,1);
-      st.setString(2,"Jose E C");
-      st.execute();
-      st.close();
-      System.out.println("Registro insertado");
-     //Tambien se cierran las centencias al igual que las condiciones
-     st.close();
-       // System.out.println("Tabla generada con exito");
-        
     }catch(ClassNotFoundException e){
         System.out.println("Nos se cargo bien el driver");
     }catch(SQLException e){
