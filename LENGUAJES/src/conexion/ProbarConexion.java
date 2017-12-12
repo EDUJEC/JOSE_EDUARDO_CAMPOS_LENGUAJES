@@ -14,7 +14,7 @@ import java.sql.*;
 public class ProbarConexion {
     //kotlin jetbrens compilador online kotlinlang.org
     public static void main (String[] args){
-     
+ 
         Connection con=null;   
         
     try{
@@ -51,7 +51,7 @@ public class ProbarConexion {
              if (con!=null)con.close();           
              System.out.println("Ya se cerro todo");
          } catch (SQLException ex) {
-         }
+}
     }
     }
 }
